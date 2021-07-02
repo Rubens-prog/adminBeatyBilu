@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!----swiper-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!----fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!----css-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>BeutyBilu</title>
+  </head>
+  <body>
+    <header id="header" class="scroll">
+      <nav class="container sho">
+        <a class="logo" href="#">Beauty<span>Bilu</span>.</a>
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="toggle open"><i class="fas fa-bars"></i></div>
+        <div class="toggle close"><i class="fas fa-times"></i></div>
+      </nav>
+    </header>
+    <!-------------------------------------home---------------------------------------------->
+    <main>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
+              ullam iste explicabo rerum aspernatur provident accusamus vero.
+              Architecto, illum sapiente.
+            </p>
+            <a href="#" class="button">Agendar um horário</a>
+          </div>
+        </div>
+      </section>
+      <div class="divider-1"></div>
+      <!-------------------------------------About---------------------------------------------->
+
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              explicabo necessitatibus temporibus atque suscipit. Exercitationem
+              quisquam facere vel impedit tempora libero, dicta explicabo
+              repellat harum expedita ipsa nobis voluptates dolor?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+              facilis dolores. Accusamus mollitia dolorum minima enim. Nulla,
+              harum vero, quo sint, aperiam aliquid magni quia doloremque
+              ducimus amet minus recusandae?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              ratione quos itaque ex distinctio consectetur, dolores molestias
+              vero impedit assumenda doloremque delectus possimus ipsam nisi
+              enim quidem veritatis iste maxime?
+            </p>
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+      <!-------------------------------------Services---------------------------------------------->
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com mais de 10 anos no mercado, o Beauty<strong>Bilu</strong>. já
+              conquistou clientes de inúmeros países com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="card">
+            <i class="far fa-paper-plane"></i>
+            <h3 class="title">Terapia Capilar</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
+              ullam iste explicabo rerum aspernatur provident accusamus vero.
+              Architecto, illum sapiente.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-cut"></i>
+            <h3 class="title">Cortes</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
+              ullam iste explicabo rerum aspernatur provident accusamus vero.
+              Architecto, illum sapiente.
+            </p>
+          </div>
+          <div class="card">
+            <i class="far fa-angry"></i>
+            <h3 class="title">Tratamentos</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
+              ullam iste explicabo rerum aspernatur provident accusamus vero.
+              Architecto, illum sapiente.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="divider-1"></div>
+
+      <!-------------------------------------Testimonials---------------------------------------------->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Est perferendis itaque unde, quo accusamus laborum
+                    cupiditate voluptas
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/10.jpg"
+                      alt=""
+                    />
+                    Maria Rocha
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Est perferendis itaque unde, quo accusamus laborum
+                    cupiditate voluptas
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/85.jpg"
+                      alt=""
+                    />
+                    Rublilu Rocha
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Est perferendis itaque unde, quo accusamus laborum
+                    cupiditate voluptas
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/33.jpg"
+                      alt=""
+                    />
+                    Valeska Silva
+                  </cite>
+                </blockquote>
+              </div>
+
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                  perferendis itaque unde, quo accusamus laborum cupiditate
+                  voluptas
+                </p>
+                <cite>
+                  <img
+                    src="https://randomuser.me/api/portraits/women/25.jpg"
+                    alt=""
+                  />
+                  Maria da silva
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+      <!-------------------------------------Contact---------------------------------------------->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iure
+              omnis tempora, officiis
+            </p>
+            <a
+              href=" https://api.whatsapp.com/send?phone=+5599999999999&text=HelloWorld!"
+              class="button"
+              target="_blank"
+              ><i class="fab fa-whatsapp"></i>Entrar em contato</a
+            >
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="fas fa-phone-alt"></i>99 99999-9999</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>R. Galdino Pires, 423B
+              </li>
+              <li><i class="fas fa-envelope"></i>beauty@bilu.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+    </main>
+
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Beauty<span>Bilu</span>.</a>
+          <p>©2021 BeautyBilu.</p>
+          <p>Todos os direitos reservados</p>
+        </div>
+
+        <div class="social">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://youtube.com" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!----swiper-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!----scrollreveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!----main.js-->
+    <script src="main.js"></script>
+  </body>
+</html>
