@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <title>Lojavel</title>
+    <title>Admin</title>
 </head>
 
 <body>
@@ -45,6 +45,9 @@
         <ul class="navbar-nav">
           <li class="nav-item active pl-5">
             <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active pl-5">
+            <a class="nav-link" href="/admin/inicio">Início</a>
           </li>
           <li class="nav-item active pl-5">
             <a class="nav-link" href="/admin/sobre">Sobre Nós</a>

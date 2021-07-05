@@ -27,6 +27,7 @@
 
     <title>BeutyBilu</title>
   </head>
+
   <body>
     <header id="header" class="scroll">
       <nav class="container sho">
@@ -49,18 +50,17 @@
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
+          @foreach($inicios as $inicio)
             <img
-              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              src="{{$inicio->img}}"
             />
           </div>
           <div class="text">
-            <h2 class="title">Saúde natural para os seus cabelos</h2>
+            <h2 class="title">{{$inicio->title}}</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
-              ullam iste explicabo rerum aspernatur provident accusamus vero.
-              Architecto, illum sapiente.
+            {{$inicio->text}}
             </p>
+            @endforeach
             <a href="#" class="button">Agendar um horário</a>
           </div>
         </div>
@@ -71,34 +71,23 @@
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
+          @foreach($dados as $dado)
+
             <img
-              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              src="{{$dado->img}}"
               alt=""
             />
           </div>
           <div class="text">
-            <h2 class="title">Sobre nós</h2>
+            <h2 class="title">{{$dado->title}}</h2>
+          
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
-              explicabo necessitatibus temporibus atque suscipit. Exercitationem
-              quisquam facere vel impedit tempora libero, dicta explicabo
-              repellat harum expedita ipsa nobis voluptates dolor?
+             {{$dado->text}}
             </p>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-              facilis dolores. Accusamus mollitia dolorum minima enim. Nulla,
-              harum vero, quo sint, aperiam aliquid magni quia doloremque
-              ducimus amet minus recusandae?
-            </p>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              ratione quos itaque ex distinctio consectetur, dolores molestias
-              vero impedit assumenda doloremque delectus possimus ipsam nisi
-              enim quidem veritatis iste maxime?
-            </p>
-            <br />
+
+            @endforeach
+
+            
           </div>
         </div>
       </section>
