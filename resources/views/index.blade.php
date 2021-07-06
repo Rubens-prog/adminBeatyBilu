@@ -127,77 +127,24 @@
           </header>
           <div class="testimonials swiper-container">
             <div class="swiper-wrapper">
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Est perferendis itaque unde, quo accusamus laborum
-                    cupiditate voluptas
-                  </p>
-                  <cite>
-                    <img
-                      src="https://randomuser.me/api/portraits/women/10.jpg"
-                      alt=""
-                    />
-                    Maria Rocha
-                  </cite>
-                </blockquote>
-              </div>
-
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Est perferendis itaque unde, quo accusamus laborum
-                    cupiditate voluptas
-                  </p>
-                  <cite>
-                    <img
-                      src="https://randomuser.me/api/portraits/men/85.jpg"
-                      alt=""
-                    />
-                    Rublilu Rocha
-                  </cite>
-                </blockquote>
-              </div>
-
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Est perferendis itaque unde, quo accusamus laborum
-                    cupiditate voluptas
-                  </p>
-                  <cite>
-                    <img
-                      src="https://randomuser.me/api/portraits/women/33.jpg"
-                      alt=""
-                    />
-                    Valeska Silva
-                  </cite>
-                </blockquote>
-              </div>
-
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
-                  perferendis itaque unde, quo accusamus laborum cupiditate
-                  voluptas
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/25.jpg"
-                    alt=""
-                  />
-                  Maria da silva
-                </cite>
-              </blockquote>
-            </div>
-
+                @foreach($testimonials as $testimonial)
+                  <div class="testimonial swiper-slide">
+                    <blockquote>
+                      <p>
+                        <span>&ldquo;</span>
+                      {{$testimonial->text}}
+                      </p>
+                      <cite>
+                        <img
+                          src="{{$testimonial->img}}"
+                          alt=""
+                        />
+                        {{$testimonial->name}}
+                      </cite>
+                    </blockquote>
+                  </div>
+                @endforeach             
+                </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>

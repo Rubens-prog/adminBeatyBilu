@@ -14,15 +14,15 @@
 @csrf
 
   <div class="form-group">
-    <label >Título</label>
+    <label>Título:</label>
     <input type="text" class="form-control" name="title">
   </div>
   <div class="form-group">
-    <label >Texto</label>
+    <label>Texto:</label>
     <textarea type="text" class="form-control" name="text" required></textarea>
   </div>
   <div class="form-group">
-    <label >Icone</label>
+    <label>Icone:</label>
     <input type="text" class="form-control" name="icon" required>
   </div>
   <button type="submit" class="btn btn-primary">Salvar</button>

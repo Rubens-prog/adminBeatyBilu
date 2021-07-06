@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerSobre;
 use App\Http\Controllers\ControllerInicio;
 use App\Http\Controllers\ControllerServico;
+use App\Http\Controllers\ControllerTestimonial;
+use App\Http\Controllers\ControllerContato;
 
 
 /*
@@ -16,14 +18,18 @@ use App\Http\Controllers\ControllerServico;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*----------------views---------------*/
+/*------------------------------views--------------------------------*/
 
 
 Route::get('/', function () {
     $dados = \App\Models\Sobre::get();
     $inicios = \App\Models\Inicio::get();
     $servicos = \App\Models\Servico::get();
-    return view('index')->with('dados', $dados)->with('inicios', $inicios)->with('servicos', $servicos);
+    $testimonials= \App\Models\Testimonial::get();
+    $contatos= \App\Models\Testimonial::get();
+    return view('index')->with('dados', $dados)->with('inicios', $inicios)
+    ->with('servicos', $servicos)->with('testimonials', $testimonials)
+    ->with('contatos', $contatos);
 });
 
 Route::get('/admin', function () {
@@ -43,11 +49,13 @@ Route::get('/admin/servicos', function () {
 });
 
 Route::get('/admin/depoimentos', function () {
-    return view('depoimentos.index');
+    $dados= App\Models\Testimonial::get();
+    return view('depoimentos.index')->with('dados', $dados);
 });
 
 Route::get('/admin/contato', function () {
-    return view('contact.index');
+    $dados= App\Models\Contato::get();
+    return view('contact.index')->with('dados', $dados);
 });
 
 Route::get('/admin/inicio', function () {
@@ -96,3 +104,31 @@ Route::get('/admin/servicos/edita',[ControllerServico::class,'editaServico']);
 Route::post('/admin/servicos/update',[ControllerServico::class,'updateServico']);
 
 Route::get('/admin/servicos/delete',[ControllerServico::class,'deleteServico']);
+
+/*-------------------------Testimonials----------------------------*/
+
+Route::get('/admin/depoimentos/adicionar', function(){
+    return view('depoimentos.add');
+});
+
+Route::post('/admin/depoimentos/salva',[ControllerTestimonial::class, 'salvaTestimonial']);
+
+Route::get('/admin/depoimentos/edita',[ControllerTestimonial::class, 'editaTestimonial']);
+
+Route::post('/admin/depoimentos/update',[ControllerTestimonial::class, 'updateTestimonial']);
+
+Route::get('/admin/depoimentos/delete', [ControllerTestimonial::class, 'deleteTestimonial']);
+
+/*-------------------------Contact----------------------------*/
+
+Route::get('/admin/contato/adicionar', function(){
+    return view('contact.add');
+});
+
+Route::post('/admin/contato/salva',[ControllerContato::class,'salvaContato']);
+
+Route::get('/admin/contato/edita',[ControllerContato::class, 'editaContato']);
+
+Route::post('/admin/contato/update',[ControllerContato::class, 'updateContato']);
+
+Route::get('/admin/contato/delete',[ControllerContato::class, 'deleteContato']);

@@ -26,11 +26,14 @@
 
   nav{
 
-    min-height:100px;
+    min-height:6.25rem;
+    width:100%;
+    margin-bottom:4rem;
     
   }
-  body{
-    /*background-color:#faF;*/
+
+  footer{
+    margin-top: 5rem;
   }
 
   
@@ -65,14 +68,7 @@
       </div>
     </div>
 
-    <div>
-          <li class="nav-item active pl-5">
-              <a class=" nav-link" onclick="logout()" aria-current="page" href="#">
-                    Sair
-            </a>
-          </li> 
-      </ul>
-    </div>
+    
 </nav>
 </header> 
 
@@ -80,7 +76,7 @@
             @yield('main')
         </div>
 
-<footer style="min-height:100px" class="blog-footer text-center bg-dark text-light p-5">
+<footer style="min-height:100%" class="blog-footer text-center bg-dark text-light p-5">
 
     <a class="text-light" href="#" >Back to top</a>
 

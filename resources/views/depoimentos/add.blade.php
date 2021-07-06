@@ -1,7 +1,7 @@
 @extends('template')
 @section('main')
 
-<h1>Administração Início</h1>
+<h1>Administração Depoimentos</h1>
 
 @if(session('Done'))
     <div class="alert alert-success"> 
@@ -10,16 +10,16 @@
 @endif
 
 
-<form action="/admin/inicio/salva" method="post">
+<form action="/admin/depoimentos/salva" method="post">
 @csrf
 
   <div class="form-group">
-    <label >Título:</label>
-    <input type="text" class="form-control" name="title">
+    <label >Texto:</label>
+    <textarea type="text" class="form-control" name="text"></textarea>
   </div>
   <div class="form-group">
-    <label >Texto:</label>
-    <textarea type="text" class="form-control" name="text" required></textarea>
+    <label>Nome:</label>
+    <input type="text" class="form-control" name="name" required>
   </div>
   <div class="form-group">
     <label >Imagem:</label>
