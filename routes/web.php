@@ -26,7 +26,7 @@ Route::get('/', function () {
     $inicios = \App\Models\Inicio::get();
     $servicos = \App\Models\Servico::get();
     $testimonials= \App\Models\Testimonial::get();
-    $contatos= \App\Models\Testimonial::get();
+    $contatos= \App\Models\Contato::get();
     return view('index')->with('dados', $dados)->with('inicios', $inicios)
     ->with('servicos', $servicos)->with('testimonials', $testimonials)
     ->with('contatos', $contatos);

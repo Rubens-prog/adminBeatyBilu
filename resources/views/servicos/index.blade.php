@@ -15,7 +15,7 @@
         <tr>
             <th>Título</th>
             <th>Texto</th>
-            <th>img</th>    
+            <th>Icone</th>    
             <th>Ações</th>    
         </tr>
     </thead>

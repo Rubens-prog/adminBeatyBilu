@@ -156,10 +156,11 @@
         <div class="container grid">
           <div class="text">
             <h2 class="title">Entre em contato com a gente</h2>
+            @foreach($contatos as $contato)
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iure
-              omnis tempora, officiis
+            {{$contato->text}}
             </p>
+            @endforeach
             <a
               href=" https://api.whatsapp.com/send?phone=+5599999999999&text=HelloWorld!"
               class="button"
@@ -170,11 +171,13 @@
 
           <div class="links">
             <ul class="grid">
-              <li><i class="fas fa-phone-alt"></i>99 99999-9999</li>
+            @foreach($contatos as $contato)
+              <li><i class="fas fa-phone-alt"></i>{{$contato->phone}}</li>
               <li>
-                <i class="fas fa-map-marker-alt"></i>R. Galdino Pires, 423B
+                <i class="fas fa-map-marker-alt"></i>{{$contato->adress}}
               </li>
-              <li><i class="fas fa-envelope"></i>beauty@bilu.com</li>
+              <li><i class="fas fa-envelope"></i>{{$contato->email}}</li>
+            @endforeach
             </ul>
           </div>
         </div>

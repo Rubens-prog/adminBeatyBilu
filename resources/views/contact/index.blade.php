@@ -1,6 +1,8 @@
 @extends('template')
 @section('main')
+
 <h1>Contatos</h1>
+
 
 @if(session('Done'))
     <div class="alert alert-success"> 
@@ -13,14 +15,14 @@
 <table class="table mt-5 table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>Texto</th>
+        <th>Texto</th>
             <th>Telefone</th>
             <th>Endereço</th>    
             <th>Email</th>    
-            <th>Ações</th>    
+            <th>Ações</th>     
         </tr>
     </thead>
-    <tbody>
+    <tbody >
     @foreach($dados as $dado)
           <tr>    
             <td>{{Str::of($dado->text)->limit(40)}}</td>

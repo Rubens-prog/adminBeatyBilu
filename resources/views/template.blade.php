@@ -10,7 +10,7 @@
     <title>Admin</title>
 </head>
 
-<body>
+
 <form id="Logout" method="POST" action="">
     @csrf
 </form>
@@ -26,57 +26,61 @@
 
   nav{
 
-    min-height:6.25rem;
+    min-height:120px;
     width:100%;
     margin-bottom:4rem;
-    
   }
 
   footer{
     margin-top: 5rem;
+    width:100%
   }
+
+  nav ul li a{
+  }
+  body{
+    width:100%;
+  }
+  
 
   
   
   
 </style>
-
-<header>  
-<nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/admin/inicio">Início</a>
-          </li>
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/admin/sobre">Sobre Nós</a>
-          </li>
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/admin/servicos">Serviços</a>
-          </li>    
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/admin/depoimentos">Depoimentos</a>
-          </li>    
-          <li class="nav-item active pl-5">
-            <a class="nav-link" href="/admin/contato">Contato</a>
-          </li>    
-        </ul>
-      </div>
-    </div>
-
-    
+<body >
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">BeautyBilu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/inicio">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/sobre">Sobre<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/servicos">Serviços<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/depoimentos">Depoimentos<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/contato">Contato<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
 </nav>
 </header> 
 
 <div style="min-height: 600px;" class="container">
             @yield('main')
-        </div>
+</div>
 
-<footer style="min-height:100%" class="blog-footer text-center bg-dark text-light p-5">
+<footer  class="blog-footer text-center bg-dark text-light p-5">
 
     <a class="text-light" href="#" >Back to top</a>
 
