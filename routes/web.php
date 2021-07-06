@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerSobre;
 use App\Http\Controllers\ControllerInicio;
+use App\Http\Controllers\ControllerServico;
 
 
 /*
@@ -21,7 +22,8 @@ use App\Http\Controllers\ControllerInicio;
 Route::get('/', function () {
     $dados = \App\Models\Sobre::get();
     $inicios = \App\Models\Inicio::get();
-    return view('index')->with('dados', $dados)->with('inicios', $inicios);
+    $servicos = \App\Models\Servico::get();
+    return view('index')->with('dados', $dados)->with('inicios', $inicios)->with('servicos', $servicos);
 });
 
 Route::get('/admin', function () {
@@ -36,7 +38,8 @@ Route::get('/admin/sobre', function () {
 });
 
 Route::get('/admin/servicos', function () {
-    return view('serviço.index');
+    $dados= App\Models\Servico::get();
+    return view('servicos.index')->with('dados', $dados);
 });
 
 Route::get('/admin/depoimentos', function () {
@@ -79,3 +82,17 @@ Route::get('admin/sobre/edita', [ControllerSobre::class, 'editSobre']);
 Route::post('admin/sobre/update/', [ControllerSobre::class, 'updateSobre']);
 
 Route::get('admin/sobre/delete', [ControllerSobre::class, 'deleteSobre']);
+
+/*-------------------------Servicos----------------------------*/
+
+Route::get('/admin/servicos/adicionar', function (){
+    return view('servicos.add');
+});
+
+Route::post('/admin/servicos/salva',[ControllerServico::class,'salvaServico']);
+
+Route::get('/admin/servicos/edita',[ControllerServico::class,'editaServico']);
+
+Route::post('/admin/servicos/update',[ControllerServico::class,'updateServico']);
+
+Route::get('/admin/servicos/delete',[ControllerServico::class,'deleteServico']);

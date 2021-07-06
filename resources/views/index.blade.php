@@ -105,36 +105,16 @@
               exclusivos e totalmente naturais
             </p>
           </header>
+
+          @foreach($servicos as $servico)
           <div class="card">
-            <i class="far fa-paper-plane"></i>
-            <h3 class="title">Terapia Capilar</h3>
+            <i class="{{$servico->icon}}"></i>
+            <h3 class="title">{{$servico->title}}</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
-              ullam iste explicabo rerum aspernatur provident accusamus vero.
-              Architecto, illum sapiente.
+             {{$servico->text}}
             </p>
           </div>
-          <div class="card">
-            <i class="fas fa-cut"></i>
-            <h3 class="title">Cortes</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
-              ullam iste explicabo rerum aspernatur provident accusamus vero.
-              Architecto, illum sapiente.
-            </p>
-          </div>
-          <div class="card">
-            <i class="far fa-angry"></i>
-            <h3 class="title">Tratamentos</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              possimus maxime ut mollitia. Nihil aliquid, unde officia ad quo
-              ullam iste explicabo rerum aspernatur provident accusamus vero.
-              Architecto, illum sapiente.
-            </p>
-          </div>
+          @endforeach
         </div>
       </section>
       <div class="divider-1"></div>
