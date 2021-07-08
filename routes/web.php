@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+
 use App\Http\Controllers\ControllerSobre;
 use App\Http\Controllers\ControllerInicio;
 use App\Http\Controllers\ControllerServico;
@@ -21,16 +23,18 @@ use App\Http\Controllers\ControllerContato;
 /*------------------------------views--------------------------------*/
 
 
+
+
 Route::get('/', function () {
-    $dados = \App\Models\Sobre::get();
-    $inicios = \App\Models\Inicio::get();
-    $servicos = \App\Models\Servico::get();
-    $testimonials= \App\Models\Testimonial::get();
-    $contatos= \App\Models\Contato::get();
-    return view('index')->with('dados', $dados)->with('inicios', $inicios)
-    ->with('servicos', $servicos)->with('testimonials', $testimonials)
-    ->with('contatos', $contatos);
+    return view('welcome');
 });
+
+
+
+Route::middleware(['auth'])->group(function () {
+
+
+
 
 Route::get('/admin', function () {
     return view('admin.admin');
@@ -132,3 +136,27 @@ Route::get('/admin/contato/edita',[ControllerContato::class, 'editaContato']);
 Route::post('/admin/contato/update',[ControllerContato::class, 'updateContato']);
 
 Route::get('/admin/contato/delete',[ControllerContato::class, 'deleteContato']);
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+ })->middleware(['auth'])->name('dashboard');
+ 
+ 
+ });
+ 
+ require __DIR__.'/auth.php';
+ 
+
+
+ Route::get('/', function () {
+    $dados = \App\Models\Sobre::get();
+    $inicios = \App\Models\Inicio::get();
+    $servicos = \App\Models\Servico::get();
+    $testimonials= \App\Models\Testimonial::get();
+    $contatos= \App\Models\Contato::get();
+    return view('index')->with('dados', $dados)->with('inicios', $inicios)
+    ->with('servicos', $servicos)->with('testimonials', $testimonials)
+    ->with('contatos', $contatos);
+});

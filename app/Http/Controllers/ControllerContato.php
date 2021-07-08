@@ -21,6 +21,7 @@ class ControllerContato extends Controller
 
         return view('contact.edit')->with('contato', $contato);
     }
+   
 
     function updateContato(Request $request){
         $id=$request->input('id');

@@ -11,7 +11,7 @@
 </head>
 
 
-<form id="Logout" method="POST" action="">
+<form id="Logout" method="POST" action="{{ route('logout') }}">
     @csrf
 </form>
 
@@ -19,60 +19,70 @@
 
   h1{
 
-    padding-top:50px;
+   margin-top:50px;
     text-align:center;
-   
+  }
+ 
+   li, a {
+    text-decoration:none;
+    color:white;
   }
 
-  nav{
 
-    min-height:120px;
-    width:100%;
-    margin-bottom:4rem;
-  }
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 20px 10%;
+  background-color:black;
+}
 
-  footer{
-    margin-top: 5rem;
-    width:100%
-  }
+.links {
+  list-style:none;
+  color:white;
+  margin-right:4rem;
+  font-size:1.15rem;
+  font-weight:700;
+}
+.links li {
+  display:inline-block;
+  padding:0px 20px;
+  margin-right:1rem;
+ 
+}
+ul{
+  display:flex;
+}
 
-  nav ul li a{
-  }
-  body{
-    width:100%;
-  }
-  
+.logo {
+  font-weight:700;
+  font-size: 2rem;
+}
 
-  
-  
-  
+.logo:hover {
+  color:#fff;
+}
+
+.links li a:hover {
+  color:#fff;
+}
+
 </style>
+
+
 <body >
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">BeautyBilu</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin/inicio">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin/sobre">Sobre<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin/servicos">Serviços<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin/depoimentos">Depoimentos<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin/contato">Contato<span class="sr-only">(current)</span></a>
-      </li>
+  <a class="logo" href="/">BeautyBilu.</a>
+  <nav>
+    <ul class="links">
+   
+      <li><a href="/admin/inicio">Inicio</a></li>
+      <li><a href="/admin/sobre">Sobre</a></li>
+      <li><a href="/admin/servicos">Serviços</a></li>
+      <li><a href="/admin/depoimentos">Depoimentos</a></li>
+      <li ><a onclick="logout()" href="#">Sair</a></li>
+      </div>   
     </ul>
-  </div>
 </nav>
 </header> 
 
@@ -80,7 +90,7 @@
             @yield('main')
 </div>
 
-<footer  class="blog-footer text-center bg-dark text-light p-5">
+<footer style=" margin-top: 5rem; background-color:black !important;" class="blog-footer text-center bg-dark text-light p-5">
 
     <a class="text-light" href="#" >Back to top</a>
 

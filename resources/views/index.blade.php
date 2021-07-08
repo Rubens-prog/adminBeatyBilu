@@ -30,7 +30,7 @@
 
   <body>
     <header id="header" class="scroll">
-      <nav class="container sho">
+      <nav class="container show">
         <a class="logo" href="#">Beauty<span>Bilu</span>.</a>
         <div class="menu">
           <ul class="grid">
@@ -71,7 +71,7 @@
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
-          @foreach($dados as $dado)
+            @foreach($dados as $dado)
 
             <img
               src="{{$dado->img}}"
@@ -97,24 +97,25 @@
 
       <section class="section" id="services">
         <div class="container grid">
-          <header>
-            <h2 class="title">Serviços</h2>
-            <p>
-              Com mais de 10 anos no mercado, o Beauty<strong>Bilu</strong>. já
-              conquistou clientes de inúmeros países com seus tratamentos
-              exclusivos e totalmente naturais
-            </p>
-          </header>
-
-          @foreach($servicos as $servico)
-          <div class="card">
-            <i class="{{$servico->icon}}"></i>
-            <h3 class="title">{{$servico->title}}</h3>
-            <p>
-             {{$servico->text}}
-            </p>
+            <header>
+              <h2 class="title">Serviços</h2>
+              <p>
+                Com mais de 10 anos no mercado, o Beauty<strong>Bilu</strong>. já
+                conquistou clientes de inúmeros países com seus tratamentos
+                exclusivos e totalmente naturais.
+              </p>
+            </header>
+            <div class="grid cards">
+              @foreach($servicos as $servico)
+              <div class="card">
+                <i class="{{$servico->icon}}"></i>
+                <h3 class="title">{{$servico->title}}</h3>
+                <p>
+                {{$servico->text}}
+                </p>
+            </div>
+            @endforeach
           </div>
-          @endforeach
         </div>
       </section>
       <div class="divider-1"></div>
